@@ -12,7 +12,7 @@ class BarcodesTest < ApplicationSystemTestCase
 
   test "should create barcode" do
     visit barcodes_url
-    click_on "New barcode"
+    click_on "New Barcode", match: :first
 
     fill_in "Name", with: @barcode.name
     fill_in "Value", with: @barcode.value
@@ -24,7 +24,7 @@ class BarcodesTest < ApplicationSystemTestCase
 
   test "should update Barcode" do
     visit barcode_url(@barcode)
-    click_on "Edit this barcode", match: :first
+    click_on "Edit", match: :first
 
     fill_in "Name", with: @barcode.name
     fill_in "Value", with: @barcode.value
@@ -36,7 +36,7 @@ class BarcodesTest < ApplicationSystemTestCase
 
   test "should destroy Barcode" do
     visit barcode_url(@barcode)
-    click_on "Destroy this barcode", match: :first
+    click_on "Delete", match: :first
 
     assert_text "Barcode was successfully destroyed"
   end
