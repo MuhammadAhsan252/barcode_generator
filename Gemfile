@@ -63,5 +63,5 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem 'barby', '~> 0.6.2'
+gem 'barby', '~> 0.7.0'
 gem 'chunky_png'
