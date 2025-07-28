@@ -1,6 +1,6 @@
-require 'barby'
-require 'barby/barcode/code_128'
-require 'barby/outputter/png_outputter'
+require "barby"
+require "barby/barcode/code_128"
+require "barby/outputter/png_outputter"
 
 class BarcodesController < ApplicationController
   before_action :set_barcode, only: %i[ show edit update destroy print ]

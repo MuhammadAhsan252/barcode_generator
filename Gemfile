@@ -54,7 +54,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  gem 'pry'
+  gem "pry"
 end
 
 group :test do
@@ -63,5 +63,5 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem 'barby', '~> 0.6.2'
-gem 'chunky_png'
+gem "barby", "~> 0.6.2"
+gem "chunky_png"
