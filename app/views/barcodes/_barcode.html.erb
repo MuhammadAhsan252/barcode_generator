@@ -1,0 +1,18 @@
+<div id="<%= dom_id barcode %>" class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title">
+      <i class="bi bi-upc-scan me-2"></i><%= barcode.name %>
+    </h5>
+    
+    <div class="mb-3">
+      <strong class="text-muted">Value:</strong>
+      <code class="bg-light p-1 rounded"><%= barcode.value %></code>
+    </div>
+
+    <% if barcode.image.attached? %>
+      <div class="text-center">
+        <%= image_tag barcode.image, class: "img-fluid border rounded" %>
+      </div>
+    <% end %>
+  </div>
+</div>

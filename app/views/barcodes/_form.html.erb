@@ -1,0 +1,31 @@
+<%= form_with(model: barcode, local: true, class: "needs-validation", novalidate: true) do |form| %>
+  <% if barcode.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <h4 class="alert-heading">
+        <i class="bi bi-exclamation-triangle me-2"></i>
+        <%= pluralize(barcode.errors.count, "error") %> prohibited this barcode from being saved:
+      </h4>
+      <hr>
+      <ul class="mb-0">
+        <% barcode.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :name, class: "form-label" %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Enter barcode name" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :value, class: "form-label" %>
+    <%= form.textarea :value, class: "form-control", rows: 3, placeholder: "Enter barcode value" %>
+    <div class="form-text">This will be encoded into the barcode.</div>
+  </div>
+
+  <div class="mb-3">
+    <%= form.submit class: "btn btn-primary btn-lg" %>
+  </div>
+<% end %>
